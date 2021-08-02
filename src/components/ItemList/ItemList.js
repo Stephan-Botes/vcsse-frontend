@@ -43,7 +43,7 @@ class ItemList extends Component {
      */
     // Function used to retrieve the user data from the different API's and updates the search states of the component
     fetchUserData = async (username) => {
-        const userData = await fetch(`http://localhost:8000/?q=${username}`)
+        const userData = await fetch(`https://stepbot-vcsse-api.herokuapp.com/?q=${username}`)
         const data = await userData.json();
         this.setState({users: data})
         this.setState({loading: false})
